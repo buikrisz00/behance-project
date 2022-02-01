@@ -41,61 +41,84 @@ font-family: 'Mukta', sans-serif;
 font-family: 'Tenor Sans', sans-serif;
 
 */
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #1F1A19;
-    background-image: url(Images/home_background.jpg);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(Images/home_background.jpg);
     color: #F5EBE3;
-    height: 100vh;
-    width: 100%;
-    font-family: 'Mukta', sans-serif;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    font-family: 'Tenor Sans', sans-serif;
 }
 
 #root {
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
-    margin-right: 250px;
     position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(Images/home_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
 }
 
-#menuDiv {
+.menuDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 250px;
     /* flex-wrap: wrap; */
     height: 10vh;
-    border-bottom: 1px solid #F5EBE3;
+    border-bottom: 1px solid #f5ebe380;
+    text-transform: uppercase;
 }
 
-#sectionItem {
-    width: 350px;
+.sectionItem {
+    width: 300px;
     align-self: center;
-    /* padding-left: 12.5px; /*talán edit a margin leftrightra
-    padding-right: 12.5px; */
 }
+
+.sectionItem.menuList {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
+
+/* Menu bar - Hotel name and location start */
 
 .hotelName {
     justify-content: flex-start;
-    text-transform: uppercase;
-
 }
+
+.chediTxt {
+    font-size: 27px;
+    text-align: center;
+    margin-left: -130px;
+}
+
+.locationTxt {
+    font-size: 9px;
+    text-align: center;
+    margin-left: -130px;   /* How to align to left, while it still looks like center alignment */
+}
+
+/* Menu bar - Hotel name and location end */
+
+/* Menu bar - Menu items start */
 
 .menuList ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: #f5ebe3b9;
+    font-size: 12.5px
 }
 
 .menuList li {
     display: inline;
-    float: left;
-    font-size: 15px
+    float: left; 
 }
 
 .menuList a {
@@ -107,16 +130,25 @@ body {
     background-color: #3D3A39;
 }
 
+/* Menu bar - Menu items end */
+
+/* Menu bar - Make reservation start */
+
 .bookingDiv {
     text-align: right;
 }
 
-#bookingBtn {
+.bookingBtn {
     background-color: #F5EBE3;
     color: #1F1A19;
-    padding: 10px 35px;
+    height: 45px;
+    width: 180px;
     font-weight: bold; /*?????*/
 }
+
+/* Menu bar - Make reservation end */
+
+/* Main area - Welcome and hotel description text start */
 
 .mainArea {
     display: flex;
@@ -125,32 +157,245 @@ body {
     height: 90vh;
 }
 
-#mainTxt {
+.mainTxt {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: 80vh;
+    width: 400px
 }
 
-#welcomeTxt {
+.welcomeTxt {
     font-family: 'Great Vibes', cursive;
-    font-size: 110px;
+    font-size: 150px;
+    font-weight: 100;
+    margin-left: -150px;
 }
 
-#descriptionTxt {
+.descriptionTxt {
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 200px;
+    text-align: left;
     align-self: flex-end;
-    font-family: 'Mukta', sans-serif;
-    font-size: 18px;
+    opacity: 0.8;
+    line-height: 1.2em;
+    margin-top: -15px;
+    margin-right: 60px;
 }
 
-#videoLink {
+/* Main area - Welcome and hotel description text end */
+
+/* Main area - Video link and text start */
+
+.videoLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 20vh;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
+.videoBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbae84;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.playSign {
+    width: 22px;
+    height: 22px;
+    margin-left: 2px;
+    margin-right: -3px;
+    margin-bottom: -1px;
+}
+
+.playVideoTxt {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+    text-decoration-color: #f5ebe380;
+}
+
+.watchVideoTxt {
+    font-size: 14px;
+}
+
+.aboutHotelTxt {
+    font-size: 14px;
+    margin-top: 3px
+}
+
+/* Main area - Video link and text end */
+
+/* Change photo buttons in the corner start */
 
 .galleryBtn {
     position: absolute;
     right: 0;
     bottom: 0;
     margin-bottom: 50px;
+    margin-right: 110px;
 }
+
+.changeImage {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f5ebe3b9;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.changeImageL {
+    margin-left: 37px;
+}
+
+.changeImageR {
+    margin-left: 17px;
+}
+
+.changeImageTxt {
+    width: 155px;
+    text-align: right;
+    opacity: 0.9;
+}
+
+/* Change photo buttons in the corner end */
+
+/* About page start */
+
+div#aboutPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    position: relative; /* For the "Chapter 1" text */
+}
+
+/* About page - Title section start */
+
+div.aboutTitleDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #f5ebe33f;
+}
+
+h1.aboutTxt {
+    font-family: 'Great Vibes', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #dbae84;
+}
+
+h1.alpineTxt {
+    margin-bottom: 18px;
+}
+
+h2.alpineSubTxt {
+    margin-bottom: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* About page - Title section end */
+
+div.aboutMainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.aboutDetailDiv {
+    width: 650px;
+}
+
+p.detailTxt {
+    font-size: 18px;
+    width: 400px;
+    margin-top: 40px;
+    margin-left: 15px;
+    line-height: 1.4em;
+}
+
+/* About page - Circles start */
+
+div.circleContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    font-family: 'Mukta', sans-serif;
+    text-transform: uppercase;
+}
+
+h1.data {
+    letter-spacing: 0.05em;
+}
+
+p.dataDescription {
+    font-size: 15px;
+    width: 120px;
+    text-align: center;
+}
+
+p.dataDescription4 {
+    width: 100px;
+}
+
+div.detailCircles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    width: 225px;
+    margin: 15px;
+    border: 2px solid #f5ebe3;
+    border-radius: 50%;
+}
+
+div.detailCircles:hover {
+    border: 2px solid #dbae84;
+    color: #dbae84;
+    cursor: pointer;
+}
+
+/* About page - Circles end */
+
+div.aboutImgDiv {
+    width: 650px;
+}
+
+img.aboutImg {
+    height: 610px;
+    width: 600px;
+    margin-top: 45px;
+}
+
+/* About page - Chapter 1 text start */
+
+div.chapterTxt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 133px;
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+
+/* About page - Chapter 1 text end */
+
+/* About page end */

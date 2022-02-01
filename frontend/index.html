@@ -9,52 +9,109 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mukta&family=Tenor+Sans&display=swap" rel="stylesheet">
+	<script src="script.js"></script>
 </head>
 <body>
 	<div id="root">
-		<div id="menuDiv">
-			<div id="sectionItem" class="hotelName">
-				<h1 id="chediTxt">The Chedi</h1>
-				<p id="locationTxt">Andermatt, Switzerland</p>
+		<div class="menuDiv">
+			<div class="sectionItem hotelName">
+				<h1 class="chediTxt">The Chedi</h1>
+				<p class="locationTxt">Andermatt, Switzerland</p>
 			</div>
-			<div id="sectionItem" class="menuList">
-				<ul id="menuBar">
+			<div class="sectionItem menuList">
+				<ul class="menuBar">
 					<li><a href="">Covid-19</a></li>
 					<li><a href="">Rooms</a></li>
-					<li><a href="">About</a></li>
+					<li><a href="#aboutPage">About</a></li>
 					<li><a href="">Contacts</a></li>
 					<li><a href="">Investment</a></li>
 				</ul>
 			</div>
-			<div id="sectionItem" class="bookingDiv">
-				<button id="bookingBtn">
-					<span id="bookingTxt">Make reservation</span>
+			<div class="sectionItem bookingDiv">
+				<button class="bookingBtn">
+					<span class="bookingTxt">Make reservation</span>
 				</button>
 			</div>
 		</div>
 		<!--<div id="language"></div>-->
-			<div id="sectionItem" class="mainArea">
-					<div id="mainTxt">
-						<h1 id="welcomeTxt">Welcome</h1>
-						<h2 id="descriptionTxt">To the best five-star deluxe hotel in Switzerland</h2>
+			<div class="sectionItem mainArea">
+					<div class="mainTxt">
+						<h1 class="welcomeTxt">Welcome</h1>
+						<h2 class="descriptionTxt">To the best five-star deluxe hotel in Switzerland</h2>
 					</div>
-					<div id="videoLink">
-						<button id="videoBtn">
-							<img src="" alt="Play" srcset="" class="playSign">
+					<div class="videoLink">
+						<button class="videoBtn">
+							<img src="https://cdn4.iconfinder.com/data/icons/eldorado-player/40/symbol_play_1-512.png" alt="Play" class="playSign">
+							<!-- <span class="playSign"></span> -->
 						</button>
-						<p id="playVideoTxt">Watch video about Hotel</p>
+						<a href="" class="playVideoTxt">
+							<p class="watchVideoTxt">Watch video</p>
+							<p class="aboutHotelTxt">About Hotel</p>
+						</a>
 					</div>
 			</div>	
 		</div>
-		<div id="sectionItem" class="galleryBtn">
+		<div class="sectionItem galleryBtn">
 			<p class="changeImageTxt">Click to change photo</p>
-			<button class="changeImage">
-				<img src="" alt="Left" srcset="" id="imageLeft">
+			<button class="changeImage changeImageL" onclick="changeLeft()">
+				<img src="" alt="L" class="imageLeft">
 			</button>
-			<button class="changeImage">
-				<img src="" alt="Right" srcset="" id="imageRight">
+			<button class="changeImage changeImageR" onclick="changeRight()">
+				<img src="" alt="R" class="imageRight">
 			</button>
 		</div>
+	</div>
+	<div id="aboutPage">
+		<div class="aboutTitleDiv">
+			<h1 class="aboutTxt">About</h1>
+			<h1 class="alpineTxt">Alpine,</h1>
+			<h2 class="alpineSubTxt">Asian, Authentic</h2>
+		</div>
+		<div class="aboutMainDiv">
+			<div class="aboutDetailDiv">
+				<p class="detailTxt">
+					The Chedi Andermatt will captivate and move you. With its authenticity, the unusual liaison of Alpine chic and Asian expression.
+				</p>
+				<div class="circleContainer">
+					<div class="detailCircles">
+						<h1 class="data">
+							1,447m
+						</h1>
+						<p class="dataDescription">
+							Above sea level
+						</p>
+					</div>
+					<div class="detailCircles">
+						<h1 class="data">
+							24/7
+						</h1>
+						<p class="dataDescription">
+							Reception
+						</p>
+					</div>
+					<div class="detailCircles dataDescription1">
+						<h1 class="data">
+							5
+						</h1>
+						<p class="dataDescription dataDescription2">
+							Restaurants & bars
+						</p>
+					</div>
+					<div class="detailCircles dataDescription3">
+						<h1 class="data">
+							123
+						</h1>
+						<p class="dataDescription dataDescription4">
+							Rooms & suites
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="aboutImgDiv">
+				<img src="Images/about_img.PNG" alt="Mountain view" class="aboutImg">
+			</div>
+		</div>
+		<div class="chapterTxt">Chapter 1</div>
 	</div>
 </body>
 </html>
