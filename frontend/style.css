@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(Images/home_background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(Images/home_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -399,3 +399,186 @@ div.chapterTxt {
 /* About page - Chapter 1 text end */
 
 /* About page end */
+
+
+/* Offers page start */
+
+div#offersPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    position: relative;
+}
+
+/* Offer page - Title section start */
+
+div.offersTitleDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #f5ebe33f;
+}
+
+h1.vouchersTxt {
+    font-family: 'Great Vibes', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #dbae84;
+}
+
+h1.offersTxt {
+    margin-bottom: 18px;
+}
+
+h2.offersSubTxt {
+    margin-bottom: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Offer page - Title section end */
+
+/* Offer page - Main section start */
+
+div.offerCards {
+    display: flex;
+    height: 300px;
+    width: 1000px;
+    border: 1px solid #f5ebe33f;
+    margin-top: 40px;
+}
+
+div.bookingReservationDiv {
+    display: flex;
+    color: #3D3A39;
+    background-color: #dbae84;
+    width: 100px;
+    font-weight: bold;
+    writing-mode: vertical-lr;  /* ?How to flip? */
+    text-orientation: mixed;    
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+div.bookingDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding-left: 80px;
+}
+
+h1.bookingDetailsTitle {
+    color: #dbae84;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+p.bookingDetailsDescription {
+    width: 300px;
+    font-size: 14px;
+}
+
+img.bookingSmallImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 40px;
+}
+
+img.bookingBigImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+div.bookingSmallImgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+div.bookingBigImgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+div.offerCard2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+div.voucherReservationDiv {
+    display: flex;
+    color: #3D3A39;
+    background-color: #dbae84;
+    width: 100px;
+    font-weight: bold;
+    writing-mode: vertical-lr;  /* ?How to flip? */
+    text-orientation: mixed;    
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+div.voucherDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding-right: 80px;
+}
+
+h1.voucherDetailsTitle {
+    color: #dbae84;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+p.voucherDetailsDescription {
+    width: 300px;
+    font-size: 14px;
+}
+
+img.voucherSmallImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+img.voucherBigImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+div.voucherSmallImgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+div.voucherBigImgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+/* Offer page - Main section end */
+
+
+
+
+/* Offers page end */
