@@ -1,0 +1,152 @@
+/* CSS reset start */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+a{
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/* CSS reset end */
+
+/*
+Fonts:
+font-family: 'Great Vibes', cursive;
+font-family: 'Mukta', sans-serif;
+font-family: 'Tenor Sans', sans-serif;
+
+*/
+
+
+body {
+    background-color: #1F1A19;
+    background-image: url(Images/home_background.jpg);
+    color: #F5EBE3;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Mukta', sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    margin-right: 250px;
+    position: relative;
+}
+
+#menuDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    height: 10vh;
+    border-bottom: 1px solid #F5EBE3;
+}
+
+#sectionItem {
+    width: 350px;
+    align-self: center;
+    /* padding-left: 12.5px; /*talán edit a margin leftrightra
+    padding-right: 12.5px; */
+}
+
+.hotelName {
+    justify-content: flex-start;
+    text-transform: uppercase;
+
+}
+
+.menuList ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuList li {
+    display: inline;
+    float: left;
+    font-size: 15px
+}
+
+.menuList a {
+    display: block;
+    padding: 8px;
+}
+
+.menuList a:hover {
+    background-color: #3D3A39;
+}
+
+.bookingDiv {
+    text-align: right;
+}
+
+#bookingBtn {
+    background-color: #F5EBE3;
+    color: #1F1A19;
+    padding: 10px 35px;
+    font-weight: bold; /*?????*/
+}
+
+.mainArea {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+}
+
+#mainTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}
+
+#welcomeTxt {
+    font-family: 'Great Vibes', cursive;
+    font-size: 110px;
+}
+
+#descriptionTxt {
+    align-self: flex-end;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+}
+
+#videoLink {
+    height: 20vh;
+}
+
+
+.galleryBtn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 50px;
+}
