@@ -94,8 +94,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     height: 10vh;
-    margin-left: 250px;
-    margin-right: 250px;
+    /* margin-left: 250px;
+    margin-right: 250px; */
+    margin-left: 13vw;
+    margin-right: 13vw;  /* So "Chapter text" can adjust */
     border-bottom: 1px solid #f5ebe380;
     text-transform: uppercase;
 }
@@ -270,6 +272,7 @@ body {
     margin-top: 20px;
     border: 3px solid #f5ebe3b9;
     border-radius: 50%;
+    font-weight: bold;
 }
 
 #changeImageL {
@@ -292,19 +295,21 @@ body {
 
 /* About page start */
 
-#aboutPage {
-    position: relative; /* For the "Chapter 1" text */
+.subPage {
+    position: relative; /* For the "Chapter" text */
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    margin-left: 250px;
-    margin-right: 250px;
+    /* margin-left: 250px;
+    margin-right: 250px; */
+    margin-left: 13vw;
+    margin-right: 13vw;
 }
 
     /* About page - Title section start */
 
-.aboutTitleDiv {
+.subpageTitleDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -312,7 +317,7 @@ body {
     border-bottom: 1px solid #f5ebe33f;
 }
 
-.aboutTitleDiv h3 {
+.subpageTitleDiv h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     color: #dbae84;
@@ -320,11 +325,11 @@ body {
     font-size: 30px;
 }
 
-.aboutTitleDiv h1 {
+.subpageTitleDiv h1 {
     margin-bottom: 18px;
 }
 
-.aboutTitleDiv h2 {
+.subpageTitleDiv h2 {
     margin-bottom: 45px;
     text-transform: uppercase;
     font-size: 15px;
@@ -427,48 +432,208 @@ body {
 
 /* About page end */
 
+/* Awards page start */
 
-/* Offers page start */
 
-#offersPage {
-    position: relative;
+    /* Awards page - Main section start */
+
+.awardsMainDiv {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    margin-left: 250px;
-    margin-right: 250px;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-    /* Offer page - Title section start */
-
-.offersTitleDiv {
+.awardsContextDiv {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.awardsContextDiv li {
+    width: 650px;
+    height: 130px;
+}
+
+.listHeaderTxt1, .listHeaderTxt2 {
+    display: flex;
+    align-items: flex-end;
+    height: 130px;
+    padding-bottom: 20px;
+    color: #f5ebe33f;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.listHeaderTxt1 {
+    padding-left: 200px;
+}
+
+.listHeaderTxt2 {
+    padding-left: 70px;
+}
+
+.awardsContextDiv li {
+    padding-top: 30px;
+    border-top: 1px solid #f5ebe33f;
     border-bottom: 1px solid #f5ebe33f;
 }
 
-.offersTitleDiv h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #dbae84;
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
-}
-
-.offersTitleDiv h1 {
-    margin-bottom: 18px;
-}
-
-.offersTitleDiv h2 {
-    margin-bottom: 45px;
+.awardsTitleDiv li {
+    display: flex;
+    border-right: 1px solid #f5ebe33f;
     text-transform: uppercase;
-    font-size: 15px;
+    font-weight: bold;
 }
 
-    /* Offer page - Title section end */
+.awardsTitleDiv li p {
+    margin-right: 200px;
+    color: #dbae84;
+}
+
+.awardsDescriptionDiv li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 70px;
+}
+
+.awardsDescriptionDiv p {
+    width: 420px;
+}
+
+.awardsDescriptionDiv button {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #dbae84;
+    border-radius: 50%;
+    color: #dbae84;
+    font-weight: bold;
+    cursor: no-drop;
+}
+
+.awardsMainDiv a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    background-color: #dbae84;
+    color: #3D3A39;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: no-drop;
+}
+
+    /* Awards page - Main section end */
+
+
+
+/* Awards page end */
+
+/* Activities page start */
+
+.activitiesMain {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.activitiesMain div {
+    width: 33%;
+    min-width: 400px;    
+}
+
+.activitiesMain img {
+    height: 350px;
+    width: 350px;
+}
+
+.activitiesColumn1, .activitiesColumn2, .activitiesColumn3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    margin-top: 75px;
+    border-bottom: 1px solid #f5ebe33f;
+    
+}
+
+.activitiesColumn1, .activitiesColumn2 {
+    border-right: 1px solid #f5ebe33f;
+}
+
+.activitiesColumn1 div, .activitiesColumn2 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.activityName {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.activityDescription {
+    width: 340px;
+    padding-top: 25px;
+    border-top: 1px solid #f5ebe33f;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.activitiesMain button {
+    width: 80px;
+    height: 35px;
+    border: 1px solid #dbae84;
+    border-radius: 20px;
+    color: #dbae84;
+    cursor: default;
+}
+
+.activitiesColumn3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.activitiesColumn3 a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 330px;
+    width: 330px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #dbae84;
+    border-radius: 50%;
+    text-transform: uppercase;
+    color: #dbae84;
+    cursor: no-drop;
+}
+
+.allOffersTxt {
+    width: 150px;
+    font-size: 14px;
+}
+
+.plusSign {
+    font-size: 40px;
+}
+
+.numberOfOffers {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+/* Activities page end */
+
+/* Offers page start */
 
     /* Offer page - Main section start */
 
