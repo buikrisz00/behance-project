@@ -13,13 +13,16 @@
 </head>
 <body>
 	<div id="root">
+		<img src="Images/home_background_3.jpg" alt="Home background" id="homeBg0">
+		<img src="Images/home_background.jpg" alt="Home background" id="homeBg1">
+		<img src="Images/home_background_2.jpg" alt="Home background"  id="homeBg2">
 		<div class="menuDiv">
 			<div class="sectionItem hotelName">
-				<h1 class="chediTxt">The Chedi</h1>
-				<p class="locationTxt">Andermatt, Switzerland</p>
+				<h1>The Chedi</h1>
+				<p>Andermatt, Switzerland</p>
 			</div>
 			<div class="sectionItem menuList">
-				<ul class="menuBar">
+				<ul>
 					<li><a href="">Covid-19</a></li>
 					<li><a href="">Rooms</a></li>
 					<li><a href="#aboutPage">About</a></li>
@@ -28,132 +31,133 @@
 				</ul>
 			</div>
 			<div class="sectionItem bookingDiv">
-				<button class="bookingBtn">
-					<span class="bookingTxt">Make reservation</span>
+				<button>
+					Make reservation
 				</button>
 			</div>
 		</div>
 		<!--<div id="language"></div>-->
 			<div class="sectionItem mainArea">
 					<div class="mainTxt">
-						<h1 class="welcomeTxt">Welcome</h1>
-						<h2 class="descriptionTxt">To the best five-star deluxe hotel in Switzerland</h2>
+						<h1>Welcome</h1>
+						<h2>To the best five-star deluxe hotel in Switzerland</h2>
 					</div>
 					<div class="videoLink">
-						<button class="videoBtn">
-							<img src="https://cdn4.iconfinder.com/data/icons/eldorado-player/40/symbol_play_1-512.png" alt="Play" class="playSign">
-							<!-- <span class="playSign"></span> -->
+						<button>
+							<img src="https://cdn4.iconfinder.com/data/icons/eldorado-player/40/symbol_play_1-512.png" alt="Play">
 						</button>
-						<a href="" class="playVideoTxt">
-							<p class="watchVideoTxt">Watch video</p>
-							<p class="aboutHotelTxt">About Hotel</p>
+						<a href="">
+							<p>Watch video</p>
+							<p>About Hotel</p>
 						</a>
 					</div>
 			</div>	
 		</div>
 		<div class="sectionItem galleryBtn">
-			<p class="changeImageTxt">Click to change photo</p>
-			<button class="changeImage changeImageL" onclick="changeLeft()">
-				<img src="" alt="L" class="imageLeft">
+			<p>Click to change photo</p>
+			<button id="changeImageL" onclick="changeImg('changeImageL')">
+				<img src="" alt="L">
 			</button>
-			<button class="changeImage changeImageR" onclick="changeRight()">
-				<img src="" alt="R" class="imageRight">
+			<button id="changeImageR" onclick="changeImg('changeImageR')">
+				<img src="" alt="R">
 			</button>
 		</div>
 	</div>
+
 	<div id="aboutPage">
 		<div class="aboutTitleDiv">
-			<h1 class="aboutTxt">About</h1>
-			<h1 class="alpineTxt">Alpine,</h1>
-			<h2 class="alpineSubTxt">Asian, Authentic</h2>
+			<h3>About</h3>
+			<h1>Alpine,</h1>
+			<h2>Asian, Authentic</h2>
 		</div>
 		<div class="aboutMainDiv">
 			<div class="aboutDetailDiv">
-				<p class="detailTxt">
+				<p>
 					The Chedi Andermatt will captivate and move you. With its authenticity, the unusual liaison of Alpine chic and Asian expression.
 				</p>
 				<div class="circleContainer">
-					<div class="detailCircles">
-						<h1 class="data">
+					<div>
+						<h1>
 							1,447m
 						</h1>
-						<p class="dataDescription">
+						<p>
 							Above sea level
 						</p>
 					</div>
-					<div class="detailCircles">
-						<h1 class="data">
+					<div>
+						<h1>
 							24/7
 						</h1>
-						<p class="dataDescription">
+						<p>
 							Reception
 						</p>
 					</div>
-					<div class="detailCircles dataDescription1">
-						<h1 class="data">
+					<div>
+						<h1>
 							5
 						</h1>
-						<p class="dataDescription dataDescription2">
+						<p>
 							Restaurants & bars
 						</p>
 					</div>
-					<div class="detailCircles dataDescription3">
-						<h1 class="data">
+					<div class="dataDescription4">
+						<h1>
 							123
 						</h1>
-						<p class="dataDescription dataDescription4">
+						<p>
 							Rooms & suites
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="aboutImgDiv">
-				<img src="Images/about_img.PNG" alt="Mountain view" class="aboutImg">
+				<img src="Images/about_img.PNG" alt="Mountain view">
 			</div>
 		</div>
 		<div class="chapterTxt">
 			Chapter 1
 		</div>
 	</div>
+
 	<div id="offersPage">
 		<div class="offersTitleDiv">
-			<h1 class="vouchersTxt">Vouchers & Booking</h1>
-			<h1 class="offersTxt">Offers</h1>
-			<h2 class="offersSubTxt">What is available</h2>
+			<h3>Vouchers & Booking</h3>
+			<h1>Offers</h1>
+			<h2>What is available</h2>
 		</div>
 		<div class="offersMain">
-			<div class="offerCards offerCard1">
-				<div class="bookingReservationDiv">
-					<p class="bookingReservationTxt">Make a reservation</p>
+			<div class="offerCards">
+				<div class="offerReservationDiv">
+					<p>Make a reservation</p>
 				</div>
-				<div class="bookingDetailsDiv">
-					<h1 class="bookingDetailsTitle">Booking</h1>
-					<p class="bookingDetailsDescription">
+				<div class="offerDetailsDiv bookingDetailsDiv">
+					<h1>Booking</h1>
+					<p>
 						Make a reservation online in our Junior Deluxe, Deluxe and Grand Deluxe Rooms and Suites. We are willing to welcome you!
 					</p>
 				</div>
-				<div class="bookingSmallImgDiv">
-					<img src="Images/booking_small_img.PNG" alt="Room_small" class="bookingSmallImg">
+				<div class="offerSmallImgDiv bookingSmallImgDiv">
+					<img src="Images/booking_small_img.PNG" alt="Room_small">
 				</div>
-				<div class="bookingBigImgDiv">
-					<img src="Images/booking_big_img.PNG" alt="Room_big" class="bookingBigImg">
+				<div class="offerBigImgDiv bookingBigImgDiv">
+					<img src="Images/booking_big_img.PNG" alt="Room_big">
 				</div>
 			</div>
 			<div class="offerCards offerCard2">
-				<div class="voucherReservationDiv">
-					<p class="voucherReservationTxt">Buy a voucher</p>
+				<div class="offerReservationDiv">
+					<p>Buy a voucher</p>
 				</div>
-				<div class="voucherDetailsDiv">
-					<h1 class="voucherDetailsTitle">Vouchers</h1>
-					<p class="voucherDetailsDescription">
+				<div class="offerDetailsDiv voucherDetailsDiv">
+					<h1>Vouchers</h1>
+					<p>
 						Buy our gift vouchers to impress your loved ones! Overnight, SPA, Romance vouchers and more are available now.
 					</p>
 				</div>
-				<div class="voucherSmallImgDiv">
-					<img src="Images/spa_small_img.PNG" alt="Spa_small" class="voucherSmallImg">
+				<div class="offerSmallImgDiv voucherSmallImgDiv">
+					<img src="Images/spa_small_img.PNG" alt="Spa_small">
 				</div>
-				<div class="voucherBigImgDiv">
-					<img src="Images/spa_big_img.PNG" alt="Spa_big" class="voucherBigImg">
+				<div class="offerBigImgDiv voucherBigImgDiv">
+					<img src="Images/spa_big_img.PNG" alt="Spa_big">
 				</div>
 			</div>
 		</div>

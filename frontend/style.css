@@ -35,12 +35,14 @@ select {
 /* CSS reset end */
 
 /*
+
 Fonts:
 font-family: 'Great Vibes', cursive;
 font-family: 'Mukta', sans-serif;
 font-family: 'Tenor Sans', sans-serif;
 
 */
+
 html {
     scroll-behavior: smooth;
 }
@@ -51,62 +53,83 @@ body {
     font-family: 'Tenor Sans', sans-serif;
 }
 
+/* Main page start */
+
 #root {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(Images/home_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
+
+    /* Background images start */
+
+#homeBg1, #homeBg2, #homeBg0 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    transition: 0.8s linear;  /* Opacity change on click happens slower */
+}
+
+#homeBg0 {
+    opacity: 0;
+}
+
+#homeBg1 {
+    opacity: 0.5;
+}
+
+#homeBg2 {
+    opacity: 0;
+}
+
+    /* Background images end */
 
 .menuDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 10vh;
     margin-left: 250px;
     margin-right: 250px;
-    /* flex-wrap: wrap; */
-    height: 10vh;
     border-bottom: 1px solid #f5ebe380;
     text-transform: uppercase;
 }
 
 .sectionItem {
-    width: 300px;
     align-self: center;
+    width: 100%;
+    max-width: 300px;
 }
 
-.sectionItem.menuList {
+.menuDiv .menuList {
     display: flex;
-    width: 500px;
     justify-content: center;
+    width: 100%;
+    max-width: 500px;
 }
 
-/* Menu bar - Hotel name and location start */
+    /* Menu bar - Hotel name and location start */
 
-.hotelName {
-    justify-content: flex-start;
-}
-
-.chediTxt {
+.hotelName h1 {
+    text-align: center;
+    transform: translateX(-20%);
     font-size: 27px;
-    text-align: center;
-    margin-left: -130px;
 }
 
-.locationTxt {
+.hotelName p {
+    text-align: center;
+    transform: translateX(-20%);
     font-size: 9px;
-    text-align: center;
-    margin-left: -130px;   /* How to align to left, while it still looks like center alignment */
 }
 
-/* Menu bar - Hotel name and location end */
+    /* Menu bar - Hotel name and location end */
 
-/* Menu bar - Menu items start */
+    /* Menu bar - Menu items start */
 
 .menuList ul {
     list-style-type: none;
@@ -117,12 +140,10 @@ body {
 }
 
 .menuList li {
-    display: inline;
     float: left; 
 }
 
 .menuList a {
-    display: block;
     padding: 8px;
 }
 
@@ -130,25 +151,25 @@ body {
     background-color: #3D3A39;
 }
 
-/* Menu bar - Menu items end */
+    /* Menu bar - Menu items end */
 
-/* Menu bar - Make reservation start */
+    /* Menu bar - Make reservation start */
 
 .bookingDiv {
     text-align: right;
 }
 
-.bookingBtn {
-    background-color: #F5EBE3;
-    color: #1F1A19;
+.bookingDiv button {
     height: 45px;
     width: 180px;
-    font-weight: bold; /*?????*/
+    background-color: #F5EBE3;
+    color: #1F1A19;
+    font-weight: bold;
 }
 
-/* Menu bar - Make reservation end */
+    /* Menu bar - Make reservation end */
 
-/* Main area - Welcome and hotel description text start */
+    /* Main area - Welcome and hotel description text start */
 
 .mainArea {
     display: flex;
@@ -161,55 +182,56 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80vh;
-    width: 400px
+    height: 75vh;
+    width: 100%;
+    max-width: 400px;
 }
 
-.welcomeTxt {
+.mainTxt h1 {
+    transform: translateX(-50%);
     font-family: 'Great Vibes', cursive;
     font-size: 150px;
     font-weight: 100;
-    margin-left: -150px;
 }
 
-.descriptionTxt {
-    font-size: 16px;
+.mainTxt h2 {
+    align-self: flex-end;
+    text-align: left;
     text-transform: uppercase;
     width: 200px;
-    text-align: left;
-    align-self: flex-end;
+    margin-top: -15px;
     opacity: 0.8;
     line-height: 1.2em;
-    margin-top: -15px;
-    margin-right: 60px;
+    font-size: 16px;
 }
 
-/* Main area - Welcome and hotel description text end */
+    /* Main area - Welcome and hotel description text end */
 
-/* Main area - Video link and text start */
+    /* Main area - Video link and text start */
 
 .videoLink {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 20vh;
-    text-transform: uppercase;
+    height: 15vh;
     margin-bottom: 20px;
 }
 
-.videoBtn {
+.videoLink button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #dbae84;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 80px;
+    height: 100%;
+    max-height: 80px;
     margin-right: 15px;
+    border-radius: 50%;
+    background-color: #dbae84;
 }
 
-.playSign {
+.videoLink img {
     width: 22px;
     height: 22px;
     margin-left: 2px;
@@ -217,25 +239,22 @@ body {
     margin-bottom: -1px;
 }
 
-.playVideoTxt {
+.videoLink a {
     display: flex;
     flex-direction: column;
     text-decoration: underline;
     text-decoration-color: #f5ebe380;
 }
 
-.watchVideoTxt {
+.videoLink p {
+    margin-top: 3px;
+    text-transform: uppercase;
     font-size: 14px;
 }
 
-.aboutHotelTxt {
-    font-size: 14px;
-    margin-top: 3px
-}
+    /* Main area - Video link and text end */
 
-/* Main area - Video link and text end */
-
-/* Change photo buttons in the corner start */
+    /* Change photo buttons in the corner start */
 
 .galleryBtn {
     position: absolute;
@@ -245,45 +264,47 @@ body {
     margin-right: 110px;
 }
 
-.changeImage {
+.galleryBtn button {
     width: 50px;
     height: 50px;
+    margin-top: 20px;
     border: 3px solid #f5ebe3b9;
     border-radius: 50%;
-    margin-top: 20px;
 }
 
-.changeImageL {
+#changeImageL {
     margin-left: 37px;
 }
 
-.changeImageR {
+#changeImageR {
     margin-left: 17px;
 }
 
-.changeImageTxt {
+.galleryBtn p {
     width: 155px;
     text-align: right;
     opacity: 0.9;
 }
 
-/* Change photo buttons in the corner end */
+    /* Change photo buttons in the corner end */
+
+/* Main page end */
 
 /* About page start */
 
-div#aboutPage {
-    height: 100vh;
+#aboutPage {
+    position: relative; /* For the "Chapter 1" text */
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     margin-left: 250px;
     margin-right: 250px;
-    position: relative; /* For the "Chapter 1" text */
 }
 
-/* About page - Title section start */
+    /* About page - Title section start */
 
-div.aboutTitleDiv {
+.aboutTitleDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,71 +312,75 @@ div.aboutTitleDiv {
     border-bottom: 1px solid #f5ebe33f;
 }
 
-h1.aboutTxt {
-    font-family: 'Great Vibes', cursive;
+.aboutTitleDiv h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     color: #dbae84;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
 }
 
-h1.alpineTxt {
+.aboutTitleDiv h1 {
     margin-bottom: 18px;
 }
 
-h2.alpineSubTxt {
+.aboutTitleDiv h2 {
     margin-bottom: 45px;
-    font-size: 15px;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
-/* About page - Title section end */
+    /* About page - Title section end */
 
-div.aboutMainDiv {
+.aboutMainDiv {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.aboutDetailDiv {
     width: 100%;
+    max-width: 650px;
 }
 
-div.aboutDetailDiv {
-    width: 650px;
-}
-
-p.detailTxt {
-    font-size: 18px;
-    width: 400px;
+.aboutDetailDiv p {
+    width: 100%;
+    max-width: 400px;
     margin-top: 40px;
     margin-left: 15px;
     line-height: 1.4em;
+    font-size: 18px;
 }
 
-/* About page - Circles start */
+    /* About page - Circles start */
 
-div.circleContainer {
+.circleContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 45px;
-    font-family: 'Mukta', sans-serif;
     text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
 }
 
-h1.data {
+.circleContainer h1 {
     letter-spacing: 0.05em;
 }
 
-p.dataDescription {
-    font-size: 15px;
+.circleContainer p {
     width: 120px;
+    margin: unset;
+    line-height: unset;
     text-align: center;
+    font-size: 15px;
 }
 
-p.dataDescription4 {
+.dataDescription4 p {
     width: 100px;
 }
 
-div.detailCircles {
+.circleContainer div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -367,27 +392,29 @@ div.detailCircles {
     border-radius: 50%;
 }
 
-div.detailCircles:hover {
+.circleContainer div:hover {
     border: 2px solid #dbae84;
     color: #dbae84;
     cursor: pointer;
 }
 
-/* About page - Circles end */
+    /* About page - Circles end */
 
-div.aboutImgDiv {
+.aboutImgDiv {
     width: 650px;
 }
 
-img.aboutImg {
-    height: 610px;
-    width: 600px;
+.aboutImgDiv img {
+    height: 100%;
+    max-height: 610px;
+    width: 100%;
+    max-width: 600px;
     margin-top: 45px;
 }
 
-/* About page - Chapter 1 text start */
+    /* Chapter text start */
 
-div.chapterTxt {
+.chapterTxt {
     position: absolute;
     left: 0;
     top: 0;
@@ -396,26 +423,26 @@ div.chapterTxt {
     text-transform: uppercase;
 }
 
-/* About page - Chapter 1 text end */
+    /* Chapter text end */
 
 /* About page end */
 
 
 /* Offers page start */
 
-div#offersPage {
-    height: 100vh;
+#offersPage {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     margin-left: 250px;
     margin-right: 250px;
-    position: relative;
 }
 
-/* Offer page - Title section start */
+    /* Offer page - Title section start */
 
-div.offersTitleDiv {
+.offersTitleDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -423,28 +450,29 @@ div.offersTitleDiv {
     border-bottom: 1px solid #f5ebe33f;
 }
 
-h1.vouchersTxt {
-    font-family: 'Great Vibes', cursive;
+.offersTitleDiv h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     color: #dbae84;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
 }
 
-h1.offersTxt {
+.offersTitleDiv h1 {
     margin-bottom: 18px;
 }
 
-h2.offersSubTxt {
+.offersTitleDiv h2 {
     margin-bottom: 45px;
-    font-size: 15px;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
-/* Offer page - Title section end */
+    /* Offer page - Title section end */
 
-/* Offer page - Main section start */
+    /* Offer page - Main section start */
 
-div.offerCards {
+.offerCards {
     display: flex;
     height: 300px;
     width: 1000px;
@@ -452,133 +480,97 @@ div.offerCards {
     margin-top: 40px;
 }
 
-div.bookingReservationDiv {
-    display: flex;
-    color: #3D3A39;
-    background-color: #dbae84;
-    width: 100px;
-    font-weight: bold;
-    writing-mode: vertical-lr;  /* ?How to flip? */
-    text-orientation: mixed;    
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-
-div.bookingDetailsDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-    padding-left: 80px;
-}
-
-h1.bookingDetailsTitle {
-    color: #dbae84;
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-p.bookingDetailsDescription {
-    width: 300px;
-    font-size: 14px;
-}
-
-img.bookingSmallImg {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-left: 40px;
-}
-
-img.bookingBigImg {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
-
-div.bookingSmallImgDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-}
-
-div.bookingBigImgDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-}
-
-div.offerCard2 {
+.offerCard2 {
     display: flex;
     flex-direction: row-reverse;
 }
 
-div.voucherReservationDiv {
+.offerReservationDiv {
     display: flex;
-    color: #3D3A39;
-    background-color: #dbae84;
+    justify-content: center;
+    align-items: center;
     width: 100px;
-    font-weight: bold;
+    background-color: #dbae84;
     writing-mode: vertical-lr;  /* ?How to flip? */
     text-orientation: mixed;    
-    align-items: center;
-    justify-content: center;
+    color: #3D3A39;
     font-size: 12px;
+    font-weight: bold;
 }
 
-div.voucherDetailsDiv {
+        /* Offer details start */
+
+.offerDetailsDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 400px;
+}
+
+.bookingDetailsDiv {
+    padding-left: 80px;
+}
+
+.voucherDetailsDiv {
     padding-right: 80px;
 }
 
-h1.voucherDetailsTitle {
-    color: #dbae84;
-    font-size: 22px;
-    text-transform: uppercase;
+.offerDetailsDiv h1 {
     margin-bottom: 30px;
+    color: #dbae84;
+    text-transform: uppercase;
+    font-size: 22px;
 }
 
-p.voucherDetailsDescription {
+.offerDetailsDiv p {
     width: 300px;
     font-size: 14px;
 }
 
-img.voucherSmallImg {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-right: 40px;
-}
+        /* Offer details end */
 
-img.voucherBigImg {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
+        /* Small image start */
 
-div.voucherSmallImgDiv {
+.offerSmallImgDiv {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 200px;
 }
 
-div.voucherBigImgDiv {
+.offerSmallImgDiv img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.bookingSmallImgDiv img {
+    margin-left: 40px;
+}
+
+.voucherSmallImgDiv img {
+    margin-right: 40px;
+}
+
+        /* Small image end */
+
+        /* Big image start */
+
+.offerBigImgDiv {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 300px;
 }
-/* Offer page - Main section end */
 
+.offerBigImgDiv img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
 
+        /* Big image end */
 
+    /* Offer page - Main section end */
 
 /* Offers page end */

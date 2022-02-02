@@ -1,13 +1,37 @@
-function changeLeft () {
-    document.getElementById("root").style.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('Images/home_background_2.jpg')"
-    document.getElementById("root").style.backgroundRepeat = "no-repeat"
-    document.getElementById("root").style.backgroundPosition = "center"
-    document.getElementById("root").style.backgroundSize = "cover"
-}
+let bgImgArray = ["homeBg0" ,"homeBg1", "homeBg2"]
+let clickNum = 0
 
-function changeRight () {
-    document.getElementById("root").style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('Images/home_background.jpg')"
-    document.getElementById("root").style.backgroundRepeat = "no-repeat"
-    document.getElementById("root").style.backgroundPosition = "center"
-    document.getElementById("root").style.backgroundSize = "cover"
-}
+function changeImg(buttonId) {
+
+    if (buttonId == "changeImageL") {
+        for (let i = 0; i < bgImgArray.length; i++) {
+            document.getElementById(bgImgArray[i]).style.opacity = 0  
+        }
+        document.getElementById(bgImgArray[clickNum]).style.opacity = 0.5
+        if (clickNum > 0) {
+            clickNum--
+        }
+        else {
+            clickNum = 2
+        }
+        console.log(buttonId)
+        console.log(clickNum)
+    }
+
+    if (buttonId == "changeImageR") {
+        for (let i = 0; i < bgImgArray.length; i++) {
+            document.getElementById(bgImgArray[i]).style.opacity = 0  
+        }
+        document.getElementById(bgImgArray[clickNum]).style.opacity = 0.5
+        if (clickNum < 2) {
+            clickNum++
+        }
+        else {
+            clickNum = 0
+        }
+        console.log(buttonId)
+        console.log(clickNum)
+    }  
+ }
+ 
+ 
