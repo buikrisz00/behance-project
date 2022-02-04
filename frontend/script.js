@@ -1,36 +1,41 @@
-let bgImgArray = ["homeBg0" ,"homeBg1", "homeBg2"]
-let clickNum = 0
+let bgImgArray = ["homeBg0" ,"homeBg1", "homeBg2"];
+let clickNumL = 0;
+let clickNumR = 2;
 
 function changeImg(buttonId) {
 
-    if (buttonId == "changeImageL") {
+    if (buttonId === "changeImageL") {
         for (let i = 0; i < bgImgArray.length; i++) {
-            document.getElementById(bgImgArray[i]).style.opacity = 0  
+            document.getElementById(bgImgArray[i]).style.opacity = 0;
         }
-        document.getElementById(bgImgArray[clickNum]).style.opacity = 0.5
-        if (clickNum > 0) {
-            clickNum--
+        document.getElementById(bgImgArray[clickNumL]).style.opacity = 0.5;
+        if (clickNumL > 0) {
+            clickNumL--;
+            clickNumR = clickNumL + 1;
+            console.log(clickNumL + "<- ->" + clickNumR);
         }
         else {
-            clickNum = 2
+            clickNumL = 2;
+            clickNumR = 1;
+            console.log(clickNumL + "<- ->" + clickNumR);
         }
-        console.log(buttonId)
-        console.log(clickNum)
     }
 
-    if (buttonId == "changeImageR") {
+    if (buttonId === "changeImageR") {
         for (let i = 0; i < bgImgArray.length; i++) {
-            document.getElementById(bgImgArray[i]).style.opacity = 0  
+            document.getElementById(bgImgArray[i]).style.opacity = 0;
         }
-        document.getElementById(bgImgArray[clickNum]).style.opacity = 0.5
-        if (clickNum < 2) {
-            clickNum++
+        document.getElementById(bgImgArray[clickNumR]).style.opacity = 0.5;
+        if (clickNumR < 2) {
+            clickNumR++;
+            clickNumL = clickNumR - 1;
+            console.log(clickNumL + "<- ->" + clickNumR);
         }
         else {
-            clickNum = 0
+            clickNumR = 0;
+            clickNumL = 1;
+            console.log(clickNumL + "<- ->" + clickNumR);
         }
-        console.log(buttonId)
-        console.log(clickNum)
     }  
  }
  

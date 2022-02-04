@@ -53,689 +53,693 @@ body {
     font-family: 'Tenor Sans', sans-serif;
 }
 
-/* Main page start */
-
-#root {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
-
-    /* Background images start */
-
-#homeBg1, #homeBg2, #homeBg0 {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    transition: 0.8s linear;  /* Opacity change on click happens slower */
-}
-
-#homeBg0 {
-    opacity: 0;
-}
-
-#homeBg1 {
-    opacity: 0.5;
-}
-
-#homeBg2 {
-    opacity: 0;
-}
-
-    /* Background images end */
-
-.menuDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 10vh;
-    /* margin-left: 250px;
-    margin-right: 250px; */
-    margin-left: 13vw;
-    margin-right: 13vw;  /* So "Chapter text" can adjust */
-    border-bottom: 1px solid #f5ebe380;
-    text-transform: uppercase;
-}
-
-.sectionItem {
-    align-self: center;
-    width: 100%;
-    max-width: 300px;
-}
-
-.menuDiv .menuList {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 500px;
-}
-
-    /* Menu bar - Hotel name and location start */
-
-.hotelName h1 {
-    text-align: center;
-    transform: translateX(-20%);
-    font-size: 27px;
-}
-
-.hotelName p {
-    text-align: center;
-    transform: translateX(-20%);
-    font-size: 9px;
-}
-
-    /* Menu bar - Hotel name and location end */
-
-    /* Menu bar - Menu items start */
-
-.menuList ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: #f5ebe3b9;
-    font-size: 12.5px
-}
-
-.menuList li {
-    float: left; 
-}
-
-.menuList a {
-    padding: 8px;
-}
-
-.menuList a:hover {
-    background-color: #3D3A39;
-}
-
-    /* Menu bar - Menu items end */
-
-    /* Menu bar - Make reservation start */
-
-.bookingDiv {
-    text-align: right;
-}
-
-.bookingDiv button {
-    height: 45px;
-    width: 180px;
-    background-color: #F5EBE3;
-    color: #1F1A19;
-    font-weight: bold;
-}
-
-    /* Menu bar - Make reservation end */
-
-    /* Main area - Welcome and hotel description text start */
-
-.mainArea {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 90vh;
-}
-
-.mainTxt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 75vh;
-    width: 100%;
-    max-width: 400px;
-}
-
-.mainTxt h1 {
-    transform: translateX(-50%);
-    font-family: 'Great Vibes', cursive;
-    font-size: 150px;
-    font-weight: 100;
-}
-
-.mainTxt h2 {
-    align-self: flex-end;
-    text-align: left;
-    text-transform: uppercase;
-    width: 200px;
-    margin-top: -15px;
-    opacity: 0.8;
-    line-height: 1.2em;
-    font-size: 16px;
-}
-
-    /* Main area - Welcome and hotel description text end */
-
-    /* Main area - Video link and text start */
-
-.videoLink {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-    margin-bottom: 20px;
-}
-
-.videoLink button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 80px;
-    height: 100%;
-    max-height: 80px;
-    margin-right: 15px;
-    border-radius: 50%;
-    background-color: #dbae84;
-}
-
-.videoLink img {
-    width: 22px;
-    height: 22px;
-    margin-left: 2px;
-    margin-right: -3px;
-    margin-bottom: -1px;
-}
-
-.videoLink a {
-    display: flex;
-    flex-direction: column;
-    text-decoration: underline;
-    text-decoration-color: #f5ebe380;
-}
-
-.videoLink p {
-    margin-top: 3px;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-    /* Main area - Video link and text end */
-
-    /* Change photo buttons in the corner start */
-
-.galleryBtn {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-bottom: 50px;
-    margin-right: 110px;
-}
-
-.galleryBtn button {
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
-    border: 3px solid #f5ebe3b9;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-#changeImageL {
-    margin-left: 37px;
-}
-
-#changeImageR {
-    margin-left: 17px;
-}
-
-.galleryBtn p {
-    width: 155px;
-    text-align: right;
-    opacity: 0.9;
-}
-
-    /* Change photo buttons in the corner end */
-
-/* Main page end */
-
-/* About page start */
-
-.subPage {
-    position: relative; /* For the "Chapter" text */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    /* margin-left: 250px;
-    margin-right: 250px; */
-    margin-left: 13vw;
-    margin-right: 13vw;
-}
-
-    /* About page - Title section start */
-
-.subpageTitleDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #f5ebe33f;
-}
-
-.subpageTitleDiv h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #dbae84;
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
-}
-
-.subpageTitleDiv h1 {
-    margin-bottom: 18px;
-}
-
-.subpageTitleDiv h2 {
-    margin-bottom: 45px;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-    /* About page - Title section end */
-
-.aboutMainDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.aboutDetailDiv {
-    width: 100%;
-    max-width: 650px;
-}
-
-.aboutDetailDiv p {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 40px;
-    margin-left: 15px;
-    line-height: 1.4em;
-    font-size: 18px;
-}
-
-    /* About page - Circles start */
-
-.circleContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 45px;
-    text-transform: uppercase;
-    font-family: 'Mukta', sans-serif;
-}
-
-.circleContainer h1 {
-    letter-spacing: 0.05em;
-}
-
-.circleContainer p {
-    width: 120px;
-    margin: unset;
-    line-height: unset;
-    text-align: center;
-    font-size: 15px;
-}
-
-.dataDescription4 p {
-    width: 100px;
-}
-
-.circleContainer div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 225px;
-    width: 225px;
-    margin: 15px;
-    border: 2px solid #f5ebe3;
-    border-radius: 50%;
-}
-
-.circleContainer div:hover {
-    border: 2px solid #dbae84;
-    color: #dbae84;
-    cursor: pointer;
-}
-
-    /* About page - Circles end */
-
-.aboutImgDiv {
-    width: 650px;
-}
-
-.aboutImgDiv img {
-    height: 100%;
-    max-height: 610px;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 45px;
-}
-
-    /* Chapter text start */
-
-.chapterTxt {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-top: 133px;
-    opacity: 0.3;
-    text-transform: uppercase;
-}
-
-    /* Chapter text end */
-
-/* About page end */
-
-/* Awards page start */
-
-
-    /* Awards page - Main section start */
-
-.awardsMainDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.awardsContextDiv {
-    display: flex;
-    flex-wrap: wrap; 
-}
-
-.awardsContextDiv li {
-    width: 650px;
-    height: 130px;
-}
-
-.listHeaderTxt1, .listHeaderTxt2 {
-    display: flex;
-    align-items: flex-end;
-    height: 130px;
-    padding-bottom: 20px;
-    color: #f5ebe33f;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.listHeaderTxt1 {
-    padding-left: 200px;
-}
-
-.listHeaderTxt2 {
-    padding-left: 70px;
-}
-
-.awardsContextDiv li {
-    padding-top: 30px;
-    border-top: 1px solid #f5ebe33f;
-    border-bottom: 1px solid #f5ebe33f;
-}
-
-.awardsTitleDiv li {
-    display: flex;
-    border-right: 1px solid #f5ebe33f;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.awardsTitleDiv li p {
-    margin-right: 200px;
-    color: #dbae84;
-}
-
-.awardsDescriptionDiv li {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 70px;
-}
-
-.awardsDescriptionDiv p {
-    width: 420px;
-}
-
-.awardsDescriptionDiv button {
-    height: 50px;
-    width: 50px;
-    border: 2px solid #dbae84;
-    border-radius: 50%;
-    color: #dbae84;
-    font-weight: bold;
-    cursor: no-drop;
-}
-
-.awardsMainDiv a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 140px;
-    margin-top: 50px;
-    text-transform: uppercase;
-    background-color: #dbae84;
-    color: #3D3A39;
-    font-weight: bold;
-    font-size: 10px;
-    cursor: no-drop;
-}
-
-    /* Awards page - Main section end */
-
-
-
-/* Awards page end */
-
-/* Activities page start */
-
-.activitiesMain {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.activitiesMain div {
-    width: 33%;
-    min-width: 400px;    
-}
-
-.activitiesMain img {
-    height: 350px;
-    width: 350px;
-}
-
-.activitiesColumn1, .activitiesColumn2, .activitiesColumn3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 550px;
-    margin-top: 75px;
-    border-bottom: 1px solid #f5ebe33f;
+@media screen and (min-width: 480px){
     
+    
+    /* Main page start */
+    
+    #root {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+    }
+    
+        /* Background images start */
+    
+    #homeBg1, #homeBg2, #homeBg0 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        transition: 0.8s linear;  /* Opacity change on click happens slower */
+    }
+    
+    #homeBg0 {
+        opacity: 0;
+    }
+    
+    #homeBg1 {
+        opacity: 0.5;
+    }
+    
+    #homeBg2 {
+        opacity: 0;
+    }
+    
+        /* Background images end */
+    
+    .menuDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10vh;
+        /* margin-left: 250px;
+        margin-right: 250px; */
+        margin-left: 13vw;
+        margin-right: 13vw;  /* So "Chapter text" can adjust */
+        border-bottom: 1px solid #f5ebe380;
+        text-transform: uppercase;
+    }
+    
+    .sectionItem {
+        align-self: center;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .menuDiv .menuList {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+        /* Menu bar - Hotel name and location start */
+    
+    .hotelName h1 {
+        text-align: center;
+        transform: translateX(-20%);
+        font-size: 27px;
+    }
+    
+    .hotelName p {
+        text-align: center;
+        transform: translateX(-20%);
+        font-size: 9px;
+    }
+    
+        /* Menu bar - Hotel name and location end */
+    
+        /* Menu bar - Menu items start */
+    
+    .menuList ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: #f5ebe3b9;
+        font-size: 12.5px
+    }
+    
+    .menuList li {
+        float: left; 
+    }
+    
+    .menuList a {
+        padding: 8px;
+    }
+    
+    .menuList a:hover {
+        background-color: #3D3A39;
+    }
+    
+        /* Menu bar - Menu items end */
+    
+        /* Menu bar - Make reservation start */
+    
+    .bookingDiv {
+        text-align: right;
+    }
+    
+    .bookingDiv button {
+        height: 45px;
+        width: 180px;
+        background-color: #F5EBE3;
+        color: #1F1A19;
+        font-weight: bold;
+    }
+    
+        /* Menu bar - Make reservation end */
+    
+        /* Main area - Welcome and hotel description text start */
+    
+    .mainArea {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 90vh;
+    }
+    
+    .mainTxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 75vh;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .mainTxt h1 {
+        transform: translateX(-50%);
+        font-family: 'Great Vibes', cursive;
+        font-size: 150px;
+        font-weight: 100;
+    }
+    
+    .mainTxt h2 {
+        align-self: flex-end;
+        text-align: left;
+        text-transform: uppercase;
+        width: 200px;
+        margin-top: -15px;
+        opacity: 0.8;
+        line-height: 1.2em;
+        font-size: 16px;
+    }
+    
+        /* Main area - Welcome and hotel description text end */
+    
+        /* Main area - Video link and text start */
+    
+    .videoLink {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+        margin-bottom: 20px;
+    }
+    
+    .videoLink button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 80px;
+        height: 100%;
+        max-height: 80px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: #dbae84;
+    }
+    
+    .videoLink img {
+        width: 22px;
+        height: 22px;
+        margin-left: 2px;
+        margin-right: -3px;
+        margin-bottom: -1px;
+    }
+    
+    .videoLink a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: underline;
+        text-decoration-color: #f5ebe380;
+    }
+    
+    .videoLink p {
+        margin-top: 3px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    
+        /* Main area - Video link and text end */
+    
+        /* Change photo buttons in the corner start */
+    
+    .galleryBtn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 50px;
+        margin-right: 110px;
+    }
+    
+    .galleryBtn button {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        border: 3px solid #f5ebe3b9;
+        border-radius: 50%;
+        font-weight: bold;
+    }
+    
+    #changeImageL {
+        margin-left: 37px;
+    }
+    
+    #changeImageR {
+        margin-left: 17px;
+    }
+    
+    .galleryBtn p {
+        width: 155px;
+        text-align: right;
+        opacity: 0.9;
+    }
+    
+        /* Change photo buttons in the corner end */
+    
+    /* Main page end */
+    
+    /* About page start */
+    
+    .subPage {
+        position: relative; /* For the "Chapter" text */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        /* margin-left: 250px;
+        margin-right: 250px; */
+        margin-left: 13vw;
+        margin-right: 13vw;
+    }
+    
+        /* About page - Title section start */
+    
+    .subpageTitleDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #f5ebe33f;
+    }
+    
+    .subpageTitleDiv h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #dbae84;
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+    }
+    
+    .subpageTitleDiv h1 {
+        margin-bottom: 18px;
+    }
+    
+    .subpageTitleDiv h2 {
+        margin-bottom: 45px;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+    
+        /* About page - Title section end */
+    
+    .aboutMainDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .aboutDetailDiv {
+        width: 100%;
+        max-width: 550px;
+    }
+    
+    .aboutDetailDiv p {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 40px;
+        margin-left: 15px;
+        line-height: 1.4em;
+        font-size: 18px;
+    }
+    
+        /* About page - Circles start */
+    
+    .circleContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 45px;
+        text-transform: uppercase;
+        font-family: 'Mukta', sans-serif;
+    }
+    
+    .circleContainer h1 {
+        letter-spacing: 0.05em;
+    }
+    
+    .circleContainer p {
+        width: 120px;
+        margin: unset;
+        line-height: unset;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .dataDescription4 p {
+        width: 100px;
+    }
+    
+    .circleContainer div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 225px;
+        width: 225px;
+        margin: 15px;
+        border: 2px solid #f5ebe3;
+        border-radius: 50%;
+    }
+    
+    .circleContainer div:hover {
+        border: 2px solid #dbae84;
+        color: #dbae84;
+        cursor: pointer;
+    }
+    
+        /* About page - Circles end */
+    
+    .aboutImgDiv {
+        width: 550px;
+    }
+    
+    .aboutImgDiv img {
+        height: 100%;
+        max-height: 610px;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 45px;
+    }
+    
+        /* Chapter text start */
+    
+    .chapterTxt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 133px;
+        opacity: 0.3;
+        text-transform: uppercase;
+    }
+    
+        /* Chapter text end */
+    
+    /* About page end */
+    
+    /* Awards page start */
+    
+    
+        /* Awards page - Main section start */
+    
+    .awardsMainDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .awardsContextDiv {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    
+    .awardsContextDiv li {
+        width: 650px;
+        height: 130px;
+    }
+    
+    .listHeaderTxt1, .listHeaderTxt2 {
+        display: flex;
+        align-items: flex-end;
+        height: 130px;
+        padding-bottom: 20px;
+        color: #f5ebe33f;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    
+    .listHeaderTxt1 {
+        padding-left: 200px;
+    }
+    
+    .listHeaderTxt2 {
+        padding-left: 70px;
+    }
+    
+    .awardsContextDiv li {
+        padding-top: 30px;
+        border-top: 1px solid #f5ebe33f;
+        border-bottom: 1px solid #f5ebe33f;
+    }
+    
+    .awardsTitleDiv li {
+        display: flex;
+        border-right: 1px solid #f5ebe33f;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .awardsTitleDiv li p {
+        margin-right: 200px;
+        color: #dbae84;
+    }
+    
+    .awardsDescriptionDiv li {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 70px;
+    }
+    
+    .awardsDescriptionDiv p {
+        width: 420px;
+    }
+    
+    .awardsDescriptionDiv button {
+        height: 50px;
+        width: 50px;
+        border: 2px solid #dbae84;
+        border-radius: 50%;
+        color: #dbae84;
+        font-weight: bold;
+        cursor: no-drop;
+    }
+    
+    .awardsMainDiv a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 140px;
+        margin-top: 50px;
+        text-transform: uppercase;
+        background-color: #dbae84;
+        color: #3D3A39;
+        font-weight: bold;
+        font-size: 10px;
+        cursor: no-drop;
+    }
+    
+        /* Awards page - Main section end */
+    
+    
+    
+    /* Awards page end */
+    
+    /* Activities page start */
+    
+    .activitiesMain {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .activitiesMain div {
+        width: 33%;
+        min-width: 400px;    
+    }
+    
+    .activitiesMain img {
+        height: 350px;
+        width: 350px;
+    }
+    
+    .activitiesColumn1, .activitiesColumn2, .activitiesColumn3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 550px;
+        margin-top: 75px;
+        border-bottom: 1px solid #f5ebe33f;
+        
+    }
+    
+    .activitiesColumn1, .activitiesColumn2 {
+        border-right: 1px solid #f5ebe33f;
+    }
+    
+    .activitiesColumn1 div, .activitiesColumn2 div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+    
+    .activityName {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    
+    .activityDescription {
+        width: 340px;
+        padding-top: 25px;
+        border-top: 1px solid #f5ebe33f;
+        font-size: 15px;
+        opacity: 0.8;
+    }
+    
+    .activitiesMain button {
+        width: 80px;
+        height: 35px;
+        border: 1px solid #dbae84;
+        border-radius: 20px;
+        color: #dbae84;
+        cursor: default;
+    }
+    
+    .activitiesColumn3 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .activitiesColumn3 a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 330px;
+        width: 330px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 1px solid #dbae84;
+        border-radius: 50%;
+        text-transform: uppercase;
+        color: #dbae84;
+        cursor: no-drop;
+    }
+    
+    .allOffersTxt {
+        width: 150px;
+        font-size: 14px;
+    }
+    
+    .plusSign {
+        font-size: 40px;
+    }
+    
+    .numberOfOffers {
+        font-size: 13px;
+        opacity: 0.8;
+    }
+    
+    
+    /* Activities page end */
+    
+    /* Offers page start */
+    
+        /* Offer page - Main section start */
+    
+    .offerCards {
+        display: flex;
+        height: 300px;
+        width: 1000px;
+        border: 1px solid #f5ebe33f;
+        margin-top: 40px;
+    }
+    
+    .offerCard2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .offerReservationDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        background-color: #dbae84;
+        writing-mode: vertical-lr;  /* ?How to flip? */
+        text-orientation: mixed;    
+        color: #3D3A39;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+            /* Offer details start */
+    
+    .offerDetailsDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .bookingDetailsDiv {
+        padding-left: 80px;
+    }
+    
+    .voucherDetailsDiv {
+        padding-right: 80px;
+    }
+    
+    .offerDetailsDiv h1 {
+        margin-bottom: 30px;
+        color: #dbae84;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+    
+    .offerDetailsDiv p {
+        width: 300px;
+        font-size: 14px;
+    }
+    
+            /* Offer details end */
+    
+            /* Small image start */
+    
+    .offerSmallImgDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+    }
+    
+    .offerSmallImgDiv img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+    }
+    
+    .bookingSmallImgDiv img {
+        margin-left: 40px;
+    }
+    
+    .voucherSmallImgDiv img {
+        margin-right: 40px;
+    }
+    
+            /* Small image end */
+    
+            /* Big image start */
+    
+    .offerBigImgDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+    
+    .offerBigImgDiv img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+    
+            /* Big image end */
+    
+        /* Offer page - Main section end */
+    
+    /* Offers page end */
 }
-
-.activitiesColumn1, .activitiesColumn2 {
-    border-right: 1px solid #f5ebe33f;
-}
-
-.activitiesColumn1 div, .activitiesColumn2 div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-}
-
-.activityName {
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.activityDescription {
-    width: 340px;
-    padding-top: 25px;
-    border-top: 1px solid #f5ebe33f;
-    font-size: 15px;
-    opacity: 0.8;
-}
-
-.activitiesMain button {
-    width: 80px;
-    height: 35px;
-    border: 1px solid #dbae84;
-    border-radius: 20px;
-    color: #dbae84;
-    cursor: default;
-}
-
-.activitiesColumn3 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.activitiesColumn3 a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 330px;
-    width: 330px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid #dbae84;
-    border-radius: 50%;
-    text-transform: uppercase;
-    color: #dbae84;
-    cursor: no-drop;
-}
-
-.allOffersTxt {
-    width: 150px;
-    font-size: 14px;
-}
-
-.plusSign {
-    font-size: 40px;
-}
-
-.numberOfOffers {
-    font-size: 13px;
-    opacity: 0.8;
-}
-
-
-/* Activities page end */
-
-/* Offers page start */
-
-    /* Offer page - Main section start */
-
-.offerCards {
-    display: flex;
-    height: 300px;
-    width: 1000px;
-    border: 1px solid #f5ebe33f;
-    margin-top: 40px;
-}
-
-.offerCard2 {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.offerReservationDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    background-color: #dbae84;
-    writing-mode: vertical-lr;  /* ?How to flip? */
-    text-orientation: mixed;    
-    color: #3D3A39;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-        /* Offer details start */
-
-.offerDetailsDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-}
-
-.bookingDetailsDiv {
-    padding-left: 80px;
-}
-
-.voucherDetailsDiv {
-    padding-right: 80px;
-}
-
-.offerDetailsDiv h1 {
-    margin-bottom: 30px;
-    color: #dbae84;
-    text-transform: uppercase;
-    font-size: 22px;
-}
-
-.offerDetailsDiv p {
-    width: 300px;
-    font-size: 14px;
-}
-
-        /* Offer details end */
-
-        /* Small image start */
-
-.offerSmallImgDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-}
-
-.offerSmallImgDiv img {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-}
-
-.bookingSmallImgDiv img {
-    margin-left: 40px;
-}
-
-.voucherSmallImgDiv img {
-    margin-right: 40px;
-}
-
-        /* Small image end */
-
-        /* Big image start */
-
-.offerBigImgDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-}
-
-.offerBigImgDiv img {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-}
-
-        /* Big image end */
-
-    /* Offer page - Main section end */
-
-/* Offers page end */
