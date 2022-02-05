@@ -745,6 +745,210 @@ body {
 
 /* Offers page end */
 
+/*---------------------------------------------------------    ROOMS.HTML    ---------------------------------------------------------*/
+
+/* Rooms main page start */
+
+.roomsMainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin-left: 250px;
+    margin-right: 250px;
+
+}
+
+.roomsMainPage .menuDiv {
+    justify-content: space-around;
+    width: 100%;
+}
+
+.roomsTitleSection {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    border-bottom: 1px solid #f5ebe33f;
+}
+
+.roomsTitleSection h1 {
+    font-weight: 100;
+    font-size: 70px;
+    font-family: 'Great Vibes', cursive;
+} 
+
+.roomsMenuList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 300px;
+    text-align: right;
+}
+
+.roomsMenuList a {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 0 15px;
+    border-right: 1px solid #f5ebe33f;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.roomsMenuList a:hover {
+    background-color: #f5ebe33f;
+}
+
+a.noborder {
+    border: none;
+}
+
+.roomsContentSection img {
+    width: 1100px;
+    height: 600px;
+    margin: 25px 0;
+}
+
+/* Rooms main page end */
+
+/* Rooms specifications page start */
+
+
+.specificationsMainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.specificationsSection {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 1100px;
+    margin: 30px 0;
+}
+
+    /* Specifications 1 end */
+
+.specifications1 {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.specifications1 h1 span {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 100;
+    font-size: 45px;
+}
+
+.specifications1 .details {
+    position: relative;
+    display: flex;
+}
+
+.specifications1 .details img{
+    margin-right: 50px;
+}
+
+.specifications1 .details p{
+    width: 320px;
+    font-size: 18px;
+}
+
+.specifications1 .details div{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+}
+
+.specifications1 .details div h2, .specifications1 .details div p {
+    width: 100px;
+}
+
+    /* Specifications 1 end */
+
+    /* Specifications 2 start */
+
+.specifications2 {
+    position: relative;
+    justify-content: space-between;
+}
+
+.specifications2 a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #dbae84;
+}
+
+.specifications2 p {
+    align-self: flex-end;
+    padding-bottom: 100px;
+    width: 300px;
+}
+
+    /* Specifications 2 end */
+
+    /* Specifications 3 start */
+    
+.specifications3 {
+    justify-content: space-between;
+}
+
+.specifications3 img {
+    width: 33%;
+    min-width: 350px;
+}
+
+.specifications3 p {
+    align-self: flex-end;
+    padding-left: 20px;
+    padding-right: 50px;
+    margin-bottom: 70px;
+    width: 33%;
+    min-width: 350px;
+}
+
+.specifications3 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+    min-width: 350px;
+}
+
+.specifications3 div h2 {
+    font-weight: 100;
+    margin-bottom: 100px;
+}
+
+.specifications3 div button {
+    height: 200px;
+    width: 200px;
+    background-color: #dbae84;
+    border-radius: 50%;
+    color: #1F1A19;
+    font-weight: bold;
+}
+    
+    /* Specifications 3 end */
+
+
+
+/* Rooms specifications page end */
+
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1600px){
