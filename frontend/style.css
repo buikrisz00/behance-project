@@ -1242,6 +1242,91 @@ p.listHeaderTxt2 {  /* Won't overwrite in .listHeaderTxt2 p form */
 
 /* Activities page end */
 
+/* Rooms page start */
+
+.roomsMainPage {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.roomsTitleSection, .roomsContentSection img, .specificationsSection {
+    width: 950px;
+}
+
+.roomsContentSection img {
+    height: 520px;
+    margin-bottom: 50px;
+    margin-top: unset;
+}
+
+.specificationsSection {
+    height: 400px;
+}
+
+.specifications1 h1 {
+    margin-bottom: 20px;
+}
+
+.specifications1 .details img {
+    width: 600px;
+}
+
+.specifications1 .details p {
+    width: 300px;
+}
+
+.specifications1 .details div {
+    align-items: center;
+}
+
+.specifications1 .details div h2 {
+    font-size: 20px;
+    margin: 3px 0;
+}
+
+.specifications1 .details div p {
+    font-size: 15px;
+}
+
+.specifications2 img {
+    width: 600px;
+}
+
+.specifications3 p {
+    font-size: 13px;
+}
+
+.specifications3 p, .specifications3 div {
+    width: 300px;
+    min-width: unset;
+}
+
+.specifications3 div h2 {
+    font-size: 20px;
+}
+
+.amenities1, .amenities1 img {
+    width: 380px;
+    min-width: unset;
+}
+
+.amenities2 {
+    width: 570px;
+    min-width: unset;
+}
+
+.amenitiesItem {
+    width: 160px;
+}
+
+.amenities2 button {
+    margin-left: 10px;
+    width: 160px;
+}
+
+/* Rooms page end */
+
+
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -1385,6 +1470,122 @@ p.listHeaderTxt2 {  /* Won't overwrite in .listHeaderTxt2 p form */
 
 /* Offers page end */
 
+/* Rooms page start */
+
+.roomsMainPage {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.roomsTitleSection, .roomsContentSection img, .specificationsSection {
+    width: 550px;
+}
+
+.roomsContentSection img {
+    height: 480px;
+    margin-bottom: 50px;
+    margin-top: unset;
+}
+
+.specificationsMainDiv{
+    margin-bottom: 50px;
+}
+
+.specifications1 .details{
+    flex-direction: column;
+}
+
+.specificationsSection {
+    height: unset;
+}
+
+.specifications1 h1 {
+    margin-bottom: 20px;
+}
+
+.specifications1 .details img {
+    width: 500px;
+    margin-right: unset;
+    margin-bottom: 30px;
+}
+
+.specifications1 .details p {
+    width: 300px;
+}
+
+.specifications1 .details div {
+    align-items: center;
+}
+
+.specifications1 .details div h2 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.specifications2 {
+    flex-direction: column-reverse;
+}
+
+.specifications2 img {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.specifications2 p {
+    align-self: center;
+    width: 450px;
+    padding-bottom: 60px;
+}
+
+.specifications2 a {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.specifications3 {
+    flex-direction: column;
+}
+
+.specifications3 p {
+    align-self: center;
+    padding: unset;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.specifications3 p, .specifications3 div {
+    width: 450px;
+    min-width: unset;
+}
+
+.specifications3 div {
+    align-items: center;
+    text-align: center;
+}
+
+.specifications3 div h2 {
+    margin-bottom: 30px;
+}
+
+.amenitiesMainDiv {
+    height: unset;
+}
+
+.amenities1 {
+    margin-bottom: 30px;
+}
+
+.amenities2 {
+    justify-content: center;
+}
+
+.moreOffers {
+    border: 1px solid #f5ebe33f;
+}
+
+/* Rooms page end */
+
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -1527,9 +1728,15 @@ p.listHeaderTxt2 {  /* Won't overwrite in .listHeaderTxt2 p form */
     margin-right: 50px;
 }
 
+.subpageTitleDiv h1 {
+    font-size: 22px;
+}
+
 .subpageTitleDiv h2 {
     max-width: 200px;
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 13px;
 }
 
 .aboutMainDiv {
@@ -1557,6 +1764,7 @@ p.listHeaderTxt2 {  /* Won't overwrite in .listHeaderTxt2 p form */
 
 .chapterTxt {
     font-size: 13px;
+    margin-top: 122px;
 }
 
     /* Chapter text end */
@@ -1628,6 +1836,107 @@ p.listHeaderTxt2 {  /* Won't overwrite in .listHeaderTxt2 p form */
     /* Big image end */
 
 /* Offers page end */
+
+/* Rooms page start */
+
+.roomsMainPage {
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-evenly; /*???*/
+}
+
+.roomsTitleSection, .roomsContentSection img, .specificationsSection {
+    width: 400px;
+}
+
+.roomsContentSection img {
+    height: 320px;
+}
+
+.roomsTitleSection h1 {
+    font-size: 50px;
+}
+
+.roomsMenuList a {
+    font-size: 10px;
+}
+
+.specifications1 {
+    margin-bottom: unset;
+}
+
+.specifications1 h1 {
+    text-align: center;
+}
+
+.specifications1 .details {
+    padding-bottom: 110px;
+}
+
+.specifications1 .details img {
+    width: 350px;
+}
+
+.specifications1 .details p {
+    width: 350px;
+    text-align: center;
+}
+
+.specifications1 .details div {
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+}
+
+.specifications2 img {
+    width: 350px;
+}
+
+.specifications2 p {
+    text-align: center;
+    width: 350px;
+}
+
+.specifications3 p, .specifications3 div {
+    width: 350px;
+}
+
+.amenities2 {
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amenitiesButtonDiv {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.amenitiesItem.noborder {
+    display: none;
+}
+
+.amenitiesItem {
+    text-align: center;
+}
+
+.moreOffers, .moreOffers div {
+    width: 450px;
+}
+
+.moreOffers img {
+    width: 400px;
+}
+
+.moreOffers .specTxt {
+   margin-left: 10px; 
+}
+
+.moreOffers .learnMore {
+    margin-right: 5px;
+}
+
+/* Rooms page end */
 
 }
 
